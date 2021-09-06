@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Tic Tac Toe" BackgroundColor="Black" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToe_App.NamenEingeben">
+    <ContentPage.ToolbarItems >
+
+        <ToolbarItem Text="Weiter"
+                 IconImageSource="Weiter.png"
+                 Order="Primary"
+                 Priority="1"
+                      Clicked="Bestaetigen_Clicked" />
+       
+
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+       
+        <StackLayout Padding="20" BackgroundColor="Black" >
+            
+            <Label  Padding="10" Text="Dein Name:" HorizontalOptions="Center" x:Name="lab_NameEingeben" TextColor="LawnGreen" HorizontalTextAlignment="Center"  FontSize="40"/>
+            <Entry Keyboard="Chat"  MaxLength="9"  Placeholder="BenutzerName" PlaceholderColor="AliceBlue" FontSize="30"  HorizontalOptions="Center" TextColor="LawnGreen" BackgroundColor="Magenta" x:Name="entry_EingabeName"  />
+            <StackLayout Padding="0,20,0,30" >
+               
+                <Label  Text="Wähle die Schwierigkeit:" HorizontalOptions="Center" TextColor="LawnGreen" x:Name="lab_hard" HorizontalTextAlignment="Center"  FontSize="20"/>
+            </StackLayout>
+           
+            <StackLayout Padding="0,20,0,0" Orientation="Horizontal" Spacing=" 10">
+                <Button Text="Einfach" BackgroundColor="Green"   TextColor="White"  Clicked="btn_Einfach_Click"  VerticalOptions="End" HorizontalOptions="CenterAndExpand"  x:Name="btn_Einfach" />
+                <Button Text="Schwer" BackgroundColor="Orange"      TextColor="White"  Clicked="btn_Scwer_Click"  VerticalOptions="End" HorizontalOptions="CenterAndExpand"  x:Name="btn_Schwer" />
+                <Button Text="Unmöglich" BackgroundColor="Maroon"    TextColor="White"  Clicked="btn_Unmoeglich_Click"  VerticalOptions="End" HorizontalOptions="CenterAndExpand"  x:Name="btn_Unmoeglich" />
+               
+                
+            </StackLayout>
+            <StackLayout >
+                <Label Padding="0,60,0,0"  Text="Wähle den Spielmodus:" HorizontalOptions="Center" TextColor="LawnGreen" x:Name="lab_Modus" HorizontalTextAlignment="Center"  FontSize="20"/>
+            </StackLayout>
+            <StackLayout Padding="0,30,0,0" Orientation="Horizontal" Spacing=" 10">
+                <Button Text="1 vs 1" BackgroundColor="Cyan"      TextColor="Black"   Clicked="btn_1vs1_Clicked"   VerticalOptions="End" HorizontalOptions="CenterAndExpand"  x:Name="btn_1vs1" />
+                <Button Text="vs Com" BackgroundColor="Cyan"        TextColor="Black"   Clicked="btn_vsCom_Clicked"  VerticalOptions="End" HorizontalOptions="CenterAndExpand"  x:Name="btn_vsCom" />
+               
+
+
+            </StackLayout>
+           
+            
+        </StackLayout>
+       
+       
+    </ContentPage.Content>
+</ContentPage>

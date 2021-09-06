@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="0,60,0,0" BackgroundColor="Black" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToe_App.Start">
+    <ContentPage.ToolbarItems >
+
+        <ToolbarItem Text="Weiter"
+                 IconImageSource="Weiter.png"
+                 Order="Primary"
+                 Priority="1"
+                      Clicked="ToolbarItemWeiter_Clicked"  />
+        <ToolbarItem Text="Info"
+                 IconImageSource="Info.png"
+                 Order="Primary"
+                 Priority="0"
+                      Clicked="ToolbarItemInfo_Clicked"   />
+
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="Toe.png" Aspect="AspectFill" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
