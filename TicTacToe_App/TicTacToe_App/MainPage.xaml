@@ -4,64 +4,87 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              
              x:Class="TicTacToe_App.MainPage">
-             
-  
- 
-      
-       
-       
 
-        <StackLayout   Padding="0,15,0,0" VerticalOptions="Center"        HorizontalOptions="Center"   >
+
+
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*"/>
+            <RowDefinition  Height="1*"/>
+            <RowDefinition  Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout   VerticalOptions="CenterAndExpand"    Grid.Row="0" HorizontalOptions="Center"   >
             <Image Source="Tac.png" Aspect="AspectFill" VerticalOptions="Start" />
-            <StackLayout Padding="53,20,0,0" Orientation="Horizontal">
-                <Label x:Name="lab_Modus" Text="Schwierigkeit:" FontSize="20" TextColor="SteelBlue"  HorizontalOptions="Start"  />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0" >
+                <Label x:Name="lab_Modus" Text="Schwierigkeit:" FontSize="20" TextColor="SteelBlue"  HorizontalOptions="Start" VerticalOptions="StartAndExpand"  />
                 <Label x:Name="lab_HardMode" FontSize="20" TextColor="Cyan" HorizontalOptions="Start"  />
                 <Label Text="2" x:Name="lab_Spielerermitteln" IsVisible="false"/>
-                
-               
-               
             </StackLayout>
+               
 
-            <StackLayout Padding="53,0,0,10" Orientation="Horizontal" Spacing="10">
+         
+
+            
+         </StackLayout> 
+        
+            <StackLayout Margin="0,0,0,20" Orientation="Horizontal" Grid.Row="2" Spacing="10"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                 <Label x:Name="lab_SpielerName" FontSize="20" TextColor="OldLace"   HorizontalOptions="Start"  />
                 <Label x:Name="lab_ZaehlerX" Text="0" FontSize="20" TextColor="Yellow"       HorizontalOptions="Start"  />
                 <Label x:Name="lab_Com" Text="Com" FontSize="20" TextColor="OldLace"   HorizontalOptions="Start"  />
                 <Label x:Name="lab_ZaehlerO" Text="0" FontSize="20" TextColor="Yellow"   HorizontalOptions="Start"  />
 
             </StackLayout>
-            
-            <StackLayout HorizontalOptions="Center"   BackgroundColor="Magenta"    HeightRequest="300" WidthRequest="300">
+
+            <Grid HorizontalOptions="Center" Grid.Row="1"  BackgroundColor="Magenta" >
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+                    <Button  Grid.Row="0" Grid.Column="0"  TextColor="LawnGreen" BackgroundColor="Black"  FontSize="Title"   HeightRequest="90" WidthRequest="90"   x:Name="feld_1" Clicked="feld_1_Click"/>
+                    <Button  Grid.Row="0" Grid.Column="1" TextColor="LawnGreen" BackgroundColor="Black" FontSize="Title"   HeightRequest="90" WidthRequest="90"   x:Name="feld_2" Clicked="feld_2_Click" />
+                    <Button  Grid.Row="0" Grid.Column="2" TextColor="LawnGreen" BackgroundColor="Black" FontSize="Title"   HeightRequest="90" WidthRequest="90"   x:Name="feld_3" Clicked="feld_3_Click" />
+
+
+
+            <Button Grid.Row="1" Grid.Column="0" TextColor="LawnGreen" BackgroundColor="Black" FontSize="Title"        HeightRequest="90" WidthRequest="90" x:Name="feld_4" Clicked="feld_4_Click" />
+            <Button Grid.Row="1" Grid.Column="1" TextColor="LawnGreen" BackgroundColor="Black" FontSize="Title"   HeightRequest="90" WidthRequest="90" x:Name="feld_5" Clicked="feld_5_Click" />
+            <Button Grid.Row="1" Grid.Column="2" TextColor="LawnGreen" BackgroundColor="Black" FontSize="Title"   HeightRequest="90" WidthRequest="90"  x:Name="feld_6" Clicked="feld_6_Click" />
+
+
+            <Button Grid.Row="2" Grid.Column="0" TextColor="LawnGreen" BackgroundColor="Black" FontSize="Title"   HeightRequest="90" WidthRequest="90"   x:Name="feld_7" Clicked="feld_7_Click" />
+            <Button Grid.Row="2" Grid.Column="1" TextColor="LawnGreen" BackgroundColor="Black" FontSize="Title"   HeightRequest="90" WidthRequest="90"  x:Name="feld_8" Clicked="feld_8_Click" />
+            <Button Grid.Row="2" Grid.Column="2" TextColor="LawnGreen" BackgroundColor="Black" FontSize="Title"   HeightRequest="90" WidthRequest="90"  x:Name="feld_9" Clicked="feld_9_Click" />
+               
 
                
-                <StackLayout Padding="6.5" BackgroundColor="Magenta"     Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
-
-                    <Button  TextColor="LawnGreen" BackgroundColor="Black"  FontSize="56"  HeightRequest="87" WidthRequest="87"   x:Name="feld_1" Clicked="feld_1_Click"/>
-                    <Button    TextColor="LawnGreen" BackgroundColor="Black" FontSize="56"  HeightRequest="87" WidthRequest="87"   x:Name="feld_2" Clicked="feld_2_Click" />
-                    <Button   TextColor="LawnGreen" BackgroundColor="Black" FontSize="56"  HeightRequest="87" WidthRequest="87"   x:Name="feld_3" Clicked="feld_3_Click" />
-                </StackLayout>
-
-                <StackLayout BackgroundColor="Magenta"  Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
-                    <Button TextColor="LawnGreen" BackgroundColor="Black" FontSize="56"  HeightRequest="87" WidthRequest="87" x:Name="feld_4" Clicked="feld_4_Click" />
-                    <Button TextColor="LawnGreen" BackgroundColor="Black" FontSize="56"  HeightRequest="87" WidthRequest="87" x:Name="feld_5" Clicked="feld_5_Click" />
-                    <Button TextColor="LawnGreen" BackgroundColor="Black" FontSize="56"  HeightRequest="87" WidthRequest="87"  x:Name="feld_6" Clicked="feld_6_Click" />
-                </StackLayout>
-                <StackLayout Padding="6.5" BackgroundColor="Magenta" Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
-                    <Button TextColor="LawnGreen" BackgroundColor="Black" FontSize="56"  HeightRequest="87" WidthRequest="87"   x:Name="feld_7" Clicked="feld_7_Click" />
-                    <Button TextColor="LawnGreen" BackgroundColor="Black" FontSize="56"  HeightRequest="87" WidthRequest="87"  x:Name="feld_8" Clicked="feld_8_Click" />
-                    <Button TextColor="LawnGreen" BackgroundColor="Black" FontSize="56"  HeightRequest="87" WidthRequest="87"  x:Name="feld_9" Clicked="feld_9_Click" />
-                </StackLayout>
-
-            <Label  HorizontalTextAlignment="Center"  FontSize="20" BackgroundColor="DarkMagenta" TextColor="LawnGreen" x:Name="lab_GameKoordinator" />
+            </Grid>
+        <StackLayout Grid.Row="2" Margin="0,20,0,0">
+            <Label HorizontalTextAlignment="Center"  FontSize="20" BackgroundColor="Black"  TextColor="LawnGreen" x:Name="lab_GameKoordinator" />
         </StackLayout>
-        <StackLayout Padding="0,50,0,60" Orientation="Horizontal"  Spacing="10" HorizontalOptions="Center"  VerticalOptions="End" >
-           
-            <Button  HorizontalOptions="End" VerticalOptions="End" Text="Spielen" BackgroundColor="LimeGreen"       TextColor="White"   FontSize="20" x:Name="btn_SpielStarten" Clicked="btn_SpielStarten_Click" />
+            
+        
+            <StackLayout  Orientation="Horizontal"  Spacing="10" HorizontalOptions="Center"   VerticalOptions="End" Grid.Row="2" >
+            
+            <Button  HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"  Text="Spielen" BackgroundColor="LimeGreen"       TextColor="White"   FontSize="15" x:Name="btn_SpielStarten" Clicked="btn_SpielStarten_Click" />
 
-            <Button  HorizontalOptions="End" VerticalOptions="End" Text="Reset" BackgroundColor="Aqua"       TextColor="Black"   FontSize="20" x:Name="btn_Beenden"  Clicked="btn_Beenden_Click" />
+                <Button  HorizontalOptions="EndAndExpand"  VerticalOptions="EndAndExpand"  Text="Reset" BackgroundColor="Aqua"       TextColor="Black"   FontSize="15" x:Name="btn_Beenden"  Clicked="btn_Beenden_Click" />
 
-        </StackLayout>
+            </StackLayout>
 
-    </StackLayout>
+        
+    </Grid>
+       
+       
+
+     
       
       
   

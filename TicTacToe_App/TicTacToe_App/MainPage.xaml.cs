@@ -34,8 +34,8 @@ namespace TicTacToe_App
         int zaehlerWinsO = 0;
         int zaehlerWinsCom = 0, zaehlerWinsXvsCom;
         int aufrufeMethodeOFaengtAn = 0;
-        int musicAnAus = 0;
-        ISimpleAudioPlayer player;
+        
+       
 
         public MainPage(string BenutzerName,bool hardMode,bool impossibleMode,bool gameMode)
         {
